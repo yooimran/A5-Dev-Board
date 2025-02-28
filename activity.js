@@ -6,7 +6,7 @@ window.addEventListener("load", function () {
     document.getElementById("dateDisplay").textContent = today.toLocaleDateString('en-US', options);
 });
 
-
+// Set Theme color
 
 document.getElementById("themeButton").addEventListener("click", function () {
     const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
@@ -14,7 +14,7 @@ document.getElementById("themeButton").addEventListener("click", function () {
 });
 
 
-
+// set deadline for each task
 
 function setDeadline(elementId) {
     const today = new Date();
@@ -31,17 +31,15 @@ window.addEventListener("load", function () {
     setDeadline("deadline6");
 });
 
-document.getElementById("themeButton").addEventListener("click", function () {
-    const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
-    document.body.style.backgroundColor = randomColor;
-});
 
+// clear history
 document.getElementById("clearHistory").addEventListener("click", function () {
     document.querySelectorAll(".text-sm.text-gray-700.space-y-2 li").forEach(function (element) {
         element.textContent = "";
     });
 });
 
+// Complete btn
 
 function completeTask(buttonId, headerId, activityId) {
     document.getElementById(buttonId).addEventListener("click", function () {
@@ -71,6 +69,8 @@ completeTask("completed-btn3", "header3", "activity3");
 completeTask("completed-btn4", "header4", "activity4");
 completeTask("completed-btn5", "header5", "activity5");
 completeTask("completed-btn6", "header6", "activity6");
+
+// go to blog page
 
 document.getElementById("something-new").addEventListener("click", function () {
     window.location.href = "blog.html";

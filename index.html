@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevBoard Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
 </head>
+
 <body class="bg-gray-100">
 
     <!-- Navbar -->
     <nav class="max-w-6xl mx-auto bg-white rounded-lg shadow-lg p-6 mt-4">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
-           <div class="flex items-center space-x-4">
-            <img src="./assets/logo.png" alt="">
-            <h1 class="text-xl font-bold text-gray-700">
-                Dev<span class="text-blue-500">Board</span>
-            </h1>
-           </div>
-            
+            <div class="flex items-center space-x-4">
+                <img src="./assets/logo.png" alt="">
+                <h1 class="text-xl font-bold text-gray-700">
+                    Dev<span class="text-blue-500">Board</span>
+                </h1>
+            </div>
+
             <div class="flex items-center space-x-4">
                 <img src="./assets/checkbox.png" alt="">
                 <P id="completed-task">23</P>
                 <button id="themeButton"><img src="./assets/theme-btn.png" alt=""></button>
-                
+
             </div>
         </div>
     </nav>
@@ -32,103 +34,128 @@
     <div class="max-w-6xl mx-auto bg-white rounded-lg shadow-lg p-6 flex gap-6  mt-6">
         <!-- Left Section (Main Content) -->
         <div class="w-3/4">
-            
-             <!-- Task Overview Section -->
-           <div class="grid grid-cols-3 gap-4 mb-6">
-        <!-- Task Assigned -->
-        <div class="bg-gray-200 p-4 rounded-lg shadow-md flex items-center">
-            <img class="w-10 h-10 mr-4" src="./assets/checkbox.png" alt="Task Assigned">
-            <div>
-                <p class="text-gray-600">Task Assigned</p>
-                <p id="remain-task" class="text-xl font-bold">6</p>
+
+
+            <div class="grid grid-cols-3 gap-4 mb-6">
+                <!-- Task Assigned -->
+                <div class="bg-gray-200 p-4 rounded-lg shadow-md flex items-center">
+                    <img class="w-10 h-10 mr-4" src="./assets/checkbox.png" alt="Task Assigned">
+                    <div>
+                        <p class="text-gray-600">Task Assigned</p>
+                        <p id="remain-task" class="text-xl font-bold">6</p>
+                    </div>
+                </div>
+
+                <!-- Discover Something New -->
+                <div id="something-new"
+                    class="bg-gradient-to-r from-indigo-500 to-blue-500 text-white p-4 rounded-lg flex items-center justify-center shadow-md cursor-pointer">
+                    <img class="w-10 h-10 mr-2" src="./assets/board.png" alt="Board">
+                    <p class="font-semibold">Discover Something New Today!</p>
+                </div>
+
+                <!-- Date -->
+                <div class="bg-gray-200 p-4 rounded-lg shadow-md flex items-center">
+                    <img class="w-10 h-10 mr-4 cursor-pointer" src="./assets/calender.png" alt="Calendar"
+                        id="calendarIcon">
+
+                    <div>
+                        <p class="text-gray-600">Date</p>
+                        <p class="text-lg font-bold" id="dateDisplay">Tue, Feb 25 2025</p>
+                    </div>
+                    <input type="date" id="datePicker" class="hidden">
+                </div>
+
             </div>
-        </div>
-        
-        <!-- Discover Something New -->
-        <div id="something-new" class="bg-gradient-to-r from-indigo-500 to-blue-500 text-white p-4 rounded-lg flex items-center justify-center shadow-md cursor-pointer">
-            <img class="w-10 h-10 mr-2" src="./assets/board.png" alt="Board">
-            <p class="font-semibold">Discover Something New Today!</p>
-        </div>
-        
-        <!-- Date -->
-        <div class="bg-gray-200 p-4 rounded-lg shadow-md flex items-center">
-            <img class="w-10 h-10 mr-4 cursor-pointer"  src=  "./assets/calender.png"  alt="Calendar" id="calendarIcon">
-            
-            <div>
-                <p class="text-gray-600">Date</p>
-                <p class="text-lg font-bold" id="dateDisplay">Tue, Feb 25 2025</p>
-            </div>
-            <input type="date" id="datePicker" class="hidden">
-        </div>
-        
-    </div>
-    <hr class="border-t-2 border-dashed">
-    <br>
+            <hr class="border-t-2 border-dashed">
+            <br>
 
             <!-- Task List -->
             <div class="grid grid-cols-2 gap-4">
                 <div class="bg-gray-200 p-4 rounded-lg shadow-md">
                     <p class="text-sm text-gray-500  bg-white rounded-lg p-2 inline-block">Shop Ease</p>
                     <h2 id="header1" class="font-bold text-lg">Fix Mobile Button Issue</h2>
-                    <p class="text-sm text-gray-500 bg-white rounded-lg p-2">Success is not final, failure is not fatal: It is the courage to continue that counts in life. Every step forward, no matter how small, brings you closer to your goals. Stay persistent, learn from setbacks, and keep moving ahead with determination and hope.</p>
+                    <p class="text-sm text-gray-500 bg-white rounded-lg p-2">Success is not final, failure is not fatal:
+                        It is the courage to continue that counts in life. Every step forward, no matter how small,
+                        brings you closer to your goals. Stay persistent, learn from setbacks, and keep moving ahead
+                        with determination and hope.</p>
                     <div class="flex justify-between items-center">
                         <p id="deadline" class="text-sm mt-2 text-gray-600">Deadline: 21 March 2025</p>
-                    <button id="completed-btn" class="bg-purple-500 text-white px-3 py-1 rounded mt-2">Completed</button>
+                        <button id="completed-btn"
+                            class="bg-purple-500 text-white px-3 py-1 rounded mt-2">Completed</button>
                     </div>
                 </div>
 
                 <div class="bg-gray-200 p-4 rounded-lg shadow-md">
                     <p class="text-sm text-gray-500  bg-white rounded-lg p-2 inline-block">Soft Pay</p>
                     <h2 id="header2" class="font-bold text-lg">Add Pay Success Modal</h2>
-                    <p class="text-sm text-gray-500 bg-white rounded-lg p-2">The only way to do great work is to love what you do and give it your all every day. Passion fuels perseverance, and when you truly care about your work, it reflects in the quality and impact of your efforts. Stay committed to your purpose.</p>
+                    <p class="text-sm text-gray-500 bg-white rounded-lg p-2">The only way to do great work is to love
+                        what you do and give it your all every day. Passion fuels perseverance, and when you truly care
+                        about your work, it reflects in the quality and impact of your efforts. Stay committed to your
+                        purpose.</p>
                     <div class="flex justify-between items-center">
-                        
+
                         <p id="deadline2" class="text-sm mt-2 text-gray-600">Deadline: 25 March 2025</p>
-                        <button id="completed-btn2" class="bg-purple-500 text-white px-3 py-1 rounded mt-2">Completed</button>
+                        <button id="completed-btn2"
+                            class="bg-purple-500 text-white px-3 py-1 rounded mt-2">Completed</button>
                     </div>
                 </div>
 
                 <div class="bg-gray-200 p-4 rounded-lg shadow-md">
                     <p class="text-sm text-gray-500  bg-white rounded-lg p-2 inline-block">Meta</p>
                     <h2 id="header3" class="font-bold text-lg">Add new reaction 🙌</h2>
-                    <p class="text-sm text-gray-500 bg-white rounded-lg p-2">In the middle of difficulty lies opportunity; embrace challenges to grow stronger and achieve your dreams. Every obstacle is a chance to learn, adapt, and improve. Face adversity with a positive mindset, and you’ll find new paths to success.</p>
+                    <p class="text-sm text-gray-500 bg-white rounded-lg p-2">In the middle of difficulty lies
+                        opportunity; embrace challenges to grow stronger and achieve your dreams. Every obstacle is a
+                        chance to learn, adapt, and improve. Face adversity with a positive mindset, and you’ll find new
+                        paths to success.</p>
                     <div class="flex justify-between items-center">
 
                         <p id="deadline3" class="text-sm mt-2 text-gray-600">Deadline: 31 March 2025</p>
-                        <button id="completed-btn3" class="bg-purple-500 text-white px-3 py-1 rounded mt-2">Completed</button>
+                        <button id="completed-btn3"
+                            class="bg-purple-500 text-white px-3 py-1 rounded mt-2">Completed</button>
                     </div>
                 </div>
 
                 <div class="bg-gray-200 p-4 rounded-lg shadow-md">
                     <p class="text-sm text-gray-500  bg-white rounded-lg p-2 inline-block">Programming Hero</p>
                     <h2 id="header4" class="font-bold text-lg">Fix Video Loading Issue</h2>
-                    <p class="text-sm text-gray-500 bg-white rounded-lg p-2">Happiness is not something ready-made; it comes from your own actions and how you view life. Cultivate gratitude, focus on the present, and cherish small moments. Your attitude shapes your reality, so choose joy and kindness every day.</p>
+                    <p class="text-sm text-gray-500 bg-white rounded-lg p-2">Happiness is not something ready-made; it
+                        comes from your own actions and how you view life. Cultivate gratitude, focus on the present,
+                        and cherish small moments. Your attitude shapes your reality, so choose joy and kindness every
+                        day.</p>
                     <div class="flex justify-between items-center">
 
                         <p id="deadline4" class="text-sm mt-2 text-gray-600">Deadline: 21 March 2025</p>
-                        <button id="completed-btn4" class="bg-purple-500 text-white px-3 py-1 rounded mt-2">Completed</button>
+                        <button id="completed-btn4"
+                            class="bg-purple-500 text-white px-3 py-1 rounded mt-2">Completed</button>
                     </div>
                 </div>
 
                 <div class="bg-gray-200 p-4 rounded-lg shadow-md">
                     <p class="text-sm text-gray-500 bg-white rounded-lg p-2 inline-block">Google LLC</p>
                     <h2 id="header5" class="font-bold text-lg">Integrate AI Search</h2>
-                    <p class="text-sm text-gray-500 bg-white rounded-lg p-2">Believe you can and you're halfway there; confidence and determination are key to reaching your goals. Trust in your abilities, stay focused on your vision, and don’t let doubt hold you back. Your mindset is your greatest asset.</p>
+                    <p class="text-sm text-gray-500 bg-white rounded-lg p-2">Believe you can and you're halfway there;
+                        confidence and determination are key to reaching your goals. Trust in your abilities, stay
+                        focused on your vision, and don’t let doubt hold you back. Your mindset is your greatest asset.
+                    </p>
                     <div class="flex justify-between items-center">
 
                         <p id="deadline5" class="text-sm mt-2 text-gray-600">Deadline: 01 April 2025</p>
-                        <button id="completed-btn5" class="bg-purple-500 text-white px-3 py-1 rounded mt-2">Completed</button>
+                        <button id="completed-btn5"
+                            class="bg-purple-500 text-white px-3 py-1 rounded mt-2">Completed</button>
                     </div>
                 </div>
 
                 <div class="bg-gray-200 p-4 rounded-lg shadow-md">
                     <p class="text-sm text-gray-500  bg-white rounded-lg p-2 inline-block">Polygon Tech</p>
                     <h2 id="header6" class="font-bold text-lg">Review Ami Probashi Site</h2>
-                    <p class="text-sm text-gray-500 bg-white rounded-lg p-2">The best time to plant a tree was 20 years ago; the second-best time is now, start today. Don’t wait for the perfect moment—take action, make progress, and build the future you desire. Every step counts <br>.</p>
+                    <p class="text-sm text-gray-500 bg-white rounded-lg p-2">The best time to plant a tree was 20 years
+                        ago; the second-best time is now, start today. Don’t wait for the perfect moment—take action,
+                        make progress, and build the future you desire. Every step counts <br>.</p>
                     <div class="flex justify-between items-center">
 
                         <p id="deadline6" class="text-sm mt-2 text-gray-600">Deadline: 5 May 2025</p>
-                        <button id="completed-btn6" class="bg-purple-500 text-white px-3 py-1 rounded mt-2">Completed</button>
+                        <button id="completed-btn6"
+                            class="bg-purple-500 text-white px-3 py-1 rounded mt-2">Completed</button>
                     </div>
                 </div>
             </div>
@@ -145,14 +172,16 @@
                 <li id="activity5"></li>
                 <li id="activity6"></li>
             </ul>
-            <button id="clearHistory" class="bg-blue-600 text-white px-3 py-2 mt-4 rounded w-full">Clear History</button>
+            <button id="clearHistory" class="bg-blue-600 text-white px-3 py-2 mt-4 rounded w-full">Clear
+                History</button>
         </div>
     </div>
 
     <script>
-       
+
     </script>
 
-<script src="./activity.js"></script>
+    <script src="./activity.js"></script>
 </body>
+
 </html>
