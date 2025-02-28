@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBoard Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="max-w-6xl mx-auto bg-white rounded-lg shadow-lg p-6 mt-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+           <div class="flex items-center space-x-4">
+            <img src="./assets/logo.png" alt="">
+            <h1 class="text-xl font-bold text-gray-700">
+                Dev<span class="text-blue-500">Board</span>
+            </h1>
+           </div>
+            
+            <div>
+                <button id="back-btn" class="bg-purple-500 text-white px-4 py-1 rounded mt-2">Back to Desk</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="max-w-6xl mx-auto bg-white rounded-lg shadow-lg p-6 flex gap-6 pt-16 mt-6">
+        <!-- Content goes here -->
+    </div>
+
+    <script>
+        document.getElementById("back-btn").addEventListener("click", function () {
+            window.location.href = "index.html";
+        });
+    </script>
+
+<script src="./activity.js"></script>
+</body>
+</html>
