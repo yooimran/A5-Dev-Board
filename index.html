@@ -32,11 +32,11 @@
 
     <!-- Main Content -->
     <div class="max-w-6xl mx-auto bg-white rounded-lg shadow-lg p-6 flex gap-6  mt-6">
-        <!-- Left Section (Main Content) -->
+        <!-- Left Section Main Content -->
         <div class="w-3/4">
 
 
-            <div class="grid grid-cols-3 gap-4 mb-6">
+            <div class="grid grid-cols-4 gap-4 mb-6">
                 <!-- Task Assigned -->
                 <div class="bg-gray-200 p-4 rounded-lg shadow-md flex items-center">
                     <img class="w-10 h-10 mr-4" src="./assets/checkbox.png" alt="Task Assigned">
@@ -47,26 +47,24 @@
                 </div>
 
                 <!-- Discover Something New -->
-                <div id="something-new"
-                    class="bg-gradient-to-r from-indigo-500 to-blue-500 text-white p-4 rounded-lg flex items-center justify-center shadow-md cursor-pointer">
+                <div id="something-new" class="col-span-2 bg-gradient-to-r from-indigo-500 to-blue-500 text-white p-4 rounded-lg flex items-center justify-center shadow-md cursor-pointer">
                     <img class="w-10 h-10 mr-2" src="./assets/board.png" alt="Board">
                     <p class="font-semibold">Discover Something New Today!</p>
                 </div>
 
                 <!-- Date -->
-                <div class="bg-gray-200 p-4 rounded-lg shadow-md flex items-center">
-                    <img class="w-10 h-10 mr-4 cursor-pointer" src="./assets/calender.png" alt="Calendar"
+                <div class="bg-gray-200 p-4 rounded-lg shadow-md flex items-center cursor-pointer">
+                    <img class="w-10 h-10 mr-4" src="./assets/calender.png" alt="Calendar"
                         id="calendarIcon">
 
                     <div>
                         <p class="text-gray-600">Date</p>
                         <p class="text-lg font-bold" id="dateDisplay">Tue, Feb 25 2025</p>
                     </div>
-                    <input type="date" id="datePicker" class="hidden">
                 </div>
 
             </div>
-            <hr class="border-t-2 border-dashed">
+            <hr class="border-t-4 border-dashed">
             <br>
 
             <!-- Task List -->
@@ -81,7 +79,8 @@
                     <div class="flex justify-between items-center">
                         <p id="deadline" class="text-sm mt-2 text-gray-600">Deadline: 21 March 2025</p>
                         <button id="completed-btn"
-                            class="bg-purple-500 text-white px-3 py-1 rounded mt-2">Completed</button>
+                            class="bg-purple-500 text-white px-3 py-1 rounded mt-2">Completed
+                        </button>
                     </div>
                 </div>
 
@@ -96,7 +95,8 @@
 
                         <p id="deadline2" class="text-sm mt-2 text-gray-600">Deadline: 25 March 2025</p>
                         <button id="completed-btn2"
-                            class="bg-purple-500 text-white px-3 py-1 rounded mt-2">Completed</button>
+                            class="bg-purple-500 text-white px-3 py-1 rounded mt-2">Completed
+                        </button>
                     </div>
                 </div>
 
@@ -111,7 +111,8 @@
 
                         <p id="deadline3" class="text-sm mt-2 text-gray-600">Deadline: 31 March 2025</p>
                         <button id="completed-btn3"
-                            class="bg-purple-500 text-white px-3 py-1 rounded mt-2">Completed</button>
+                            class="bg-purple-500 text-white px-3 py-1 rounded mt-2">Completed
+                        </button>
                     </div>
                 </div>
 
@@ -126,7 +127,8 @@
 
                         <p id="deadline4" class="text-sm mt-2 text-gray-600">Deadline: 21 March 2025</p>
                         <button id="completed-btn4"
-                            class="bg-purple-500 text-white px-3 py-1 rounded mt-2">Completed</button>
+                            class="bg-purple-500 text-white px-3 py-1 rounded mt-2">Completed
+                        </button>
                     </div>
                 </div>
 
@@ -141,7 +143,8 @@
 
                         <p id="deadline5" class="text-sm mt-2 text-gray-600">Deadline: 01 April 2025</p>
                         <button id="completed-btn5"
-                            class="bg-purple-500 text-white px-3 py-1 rounded mt-2">Completed</button>
+                            class="bg-purple-500 text-white px-3 py-1 rounded mt-2">Completed
+                        </button>
                     </div>
                 </div>
 
@@ -155,15 +158,23 @@
 
                         <p id="deadline6" class="text-sm mt-2 text-gray-600">Deadline: 5 May 2025</p>
                         <button id="completed-btn6"
-                            class="bg-purple-500 text-white px-3 py-1 rounded mt-2">Completed</button>
+                            class="bg-purple-500 text-white px-3 py-1 rounded mt-2">Completed
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Right Section (Activity Log) -->
+        <!-- Right Section Activity Log -->
         <div class="w-1/4 bg-gray-100 p-4 rounded-lg shadow-md">
-            <h3 class="text-lg font-semibold mb-3">Activity Log</h3>
+            <div class="flex justify-center  items-center mb-3">
+
+                <img class="w-6 h-6 mr-4 " src="./assets/activity.png" alt="">
+                <h3 class="text-2xl font-semibold ">Activity Log</h3>
+            </div>
+            <button id="clearHistory" class="bg-blue-600 text-white px-3 py-2 mb-4 rounded w-full">Clear History
+            </button>
+            <hr class="border-t-4 border-dashed">
             <ul class="text-sm text-gray-700 space-y-2">
                 <li id="activity1"></li>
                 <li id="activity2"></li>
@@ -172,8 +183,7 @@
                 <li id="activity5"></li>
                 <li id="activity6"></li>
             </ul>
-            <button id="clearHistory" class="bg-blue-600 text-white px-3 py-2 mt-4 rounded w-full">Clear
-                History</button>
+            
         </div>
     </div>
 

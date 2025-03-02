@@ -43,9 +43,9 @@ document.getElementById("clearHistory").addEventListener("click", function () {
 
 function completeTask(buttonId, headerId, activityId) {
     document.getElementById(buttonId).addEventListener("click", function () {
-        this.textContent = "Completed ✅";
+        this.textContent = "Completed";
         this.classList.remove("bg-purple-500");
-        this.classList.add("bg-green-500");
+        this.classList.add("bg-gray-500");
         this.disabled = true;
 
         const taskName = document.getElementById(headerId).textContent;
@@ -60,6 +60,9 @@ function completeTask(buttonId, headerId, activityId) {
         remainTaskElement.textContent = parseInt(remainTaskElement.textContent) - 1;
          // Alert message
     alert("Board updated successfully");
+    if (document.querySelectorAll('.bg-purple-500').length === 0) {
+        alert("You have successfully completed all tasks");
+    }
     });
 }
 
